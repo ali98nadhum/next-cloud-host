@@ -1,13 +1,13 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-    // images: {
-    //     remotePatterns: [
-    //         {
-    //             protocol: "https",
-    //             hostname: "google.com"
-    //         }
-    //     ]
-    // }
-};
+// next.config.js
 
-export default nextConfig;
+module.exports = {
+    async rewrites() {
+      return [
+        {
+          source: '/api/:path*', // Matches any path after /api/
+          destination: 'https://next-cloud-host-ewq0r9dx5-ali98nadhums-projects.vercel.app/api/:path*', // Proxy to backend
+        },
+      ]
+    },
+  }
+  
