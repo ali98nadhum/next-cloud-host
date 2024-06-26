@@ -21,7 +21,7 @@ const RegisterForm = () => {
 
     try {
       setLoadong(true);
-      await axios.post("http://localhost:3000/api/users/register", {
+      await axios.post("https://next-cloud-host-ewq0r9dx5-ali98nadhums-projects.vercel.app/api/users/register", {
         email,
         password,
         username,

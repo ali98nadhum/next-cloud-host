@@ -18,7 +18,7 @@ const AddArticleForm = () => {
     if (description === "") return toast.error("description is required");
 
     try {
-      await axios.post(`http://localhost:3000/api/articles`, { title, description });
+      await axios.post(`https://next-cloud-host-ewq0r9dx5-ali98nadhums-projects.vercel.app/api/articles`, { title, description });
       setTitle("");
       setDescription("");
       toast.success("New article added");

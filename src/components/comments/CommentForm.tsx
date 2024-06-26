@@ -19,7 +19,7 @@ const CommentForm = ({ articleId }: AddCommentFormProps) => {
     if (text === "") return toast.error("Please write something");
 
     try {
-      await axios.post(`http://localhost:3000/api/comments`, {
+      await axios.post(`https://next-cloud-host-ewq0r9dx5-ali98nadhums-projects.vercel.app/api/comments`, {
         text,
         articleId,
       });
